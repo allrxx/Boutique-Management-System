@@ -25,18 +25,16 @@ Partial Class Form3
         Me.components = New System.ComponentModel.Container()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Guna2GradientButton6 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2GroupBox2.SuspendLayout()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,21 +50,74 @@ Partial Class Form3
         '
         Me.Guna2GroupBox2.BorderColor = System.Drawing.Color.White
         Me.Guna2GroupBox2.BorderRadius = 15
-        Me.Guna2GroupBox2.Controls.Add(Me.Label5)
+        Me.Guna2GroupBox2.Controls.Add(Me.Guna2ComboBox1)
         Me.Guna2GroupBox2.Controls.Add(Me.Label6)
         Me.Guna2GroupBox2.Controls.Add(Me.Label7)
-        Me.Guna2GroupBox2.Controls.Add(Me.Label8)
         Me.Guna2GroupBox2.Controls.Add(Me.Label4)
         Me.Guna2GroupBox2.Controls.Add(Me.Label3)
         Me.Guna2GroupBox2.Controls.Add(Me.Label2)
-        Me.Guna2GroupBox2.Controls.Add(Me.Label1)
         Me.Guna2GroupBox2.CustomBorderColor = System.Drawing.Color.White
         Me.Guna2GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2GroupBox2.Location = New System.Drawing.Point(13, 104)
+        Me.Guna2GroupBox2.Location = New System.Drawing.Point(78, 101)
         Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
-        Me.Guna2GroupBox2.Size = New System.Drawing.Size(880, 79)
+        Me.Guna2GroupBox2.Size = New System.Drawing.Size(764, 84)
         Me.Guna2GroupBox2.TabIndex = 2
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 7.0!)
+        Me.Label6.Location = New System.Drawing.Point(126, 52)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(33, 12)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Label6"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 7.0!)
+        Me.Label7.Location = New System.Drawing.Point(326, 53)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(33, 12)
+        Me.Label7.TabIndex = 5
+        Me.Label7.Text = "Label7"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Label4.Location = New System.Drawing.Point(564, 13)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(65, 20)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Quantity"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Label3.Location = New System.Drawing.Point(119, 13)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Dress Name"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Label2.Location = New System.Drawing.Point(321, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 20)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Dress Size"
         '
         'Guna2GroupBox1
         '
@@ -128,94 +179,6 @@ Partial Class Form3
         Me.Guna2GradientButton1.TabIndex = 2
         Me.Guna2GradientButton1.TextOffset = New System.Drawing.Point(3, 0)
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label1.Location = New System.Drawing.Point(44, 7)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 23)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label2.Location = New System.Drawing.Point(514, 10)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 23)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label3.Location = New System.Drawing.Point(312, 8)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(59, 23)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Label3"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label4.Location = New System.Drawing.Point(768, 10)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 23)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Label4"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-        Me.Label5.Location = New System.Drawing.Point(773, 47)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Label5"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-        Me.Label6.Location = New System.Drawing.Point(319, 47)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 13)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Label6"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-        Me.Label7.Location = New System.Drawing.Point(519, 48)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(40, 13)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Label7"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-        Me.Label8.Location = New System.Drawing.Point(49, 47)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(40, 13)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Label8"
-        '
         'Guna2GradientButton2
         '
         Me.Guna2GradientButton2.BorderRadius = 15
@@ -232,14 +195,29 @@ Partial Class Form3
         Me.Guna2GradientButton2.Name = "Guna2GradientButton2"
         Me.Guna2GradientButton2.Size = New System.Drawing.Size(197, 45)
         Me.Guna2GradientButton2.TabIndex = 6
-        Me.Guna2GradientButton2.Text = "Login"
+        Me.Guna2GradientButton2.Text = "Proceed"
+        '
+        'Guna2ComboBox1
+        '
+        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.Guna2ComboBox1.ItemHeight = 30
+        Me.Guna2ComboBox1.Location = New System.Drawing.Point(523, 43)
+        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
+        Me.Guna2ComboBox1.Size = New System.Drawing.Size(140, 36)
+        Me.Guna2ComboBox1.TabIndex = 7
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(905, 531)
+        Me.ClientSize = New System.Drawing.Size(905, 306)
         Me.Controls.Add(Me.Guna2GradientButton2)
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.Controls.Add(Me.Guna2GroupBox2)
@@ -258,13 +236,11 @@ Partial Class Form3
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents Guna2GradientButton6 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
 End Class
