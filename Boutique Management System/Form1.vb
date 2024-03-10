@@ -16,6 +16,8 @@ Public Class Form1
         Else
             MessageBox.Show("Login failed. Invalid username or password.")
         End If
+        Me.Hide()
+        Form2.Show()
     End Sub
 
     Private Function AuthenticateUser(username As String, password As String) As Boolean

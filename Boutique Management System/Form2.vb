@@ -3,7 +3,21 @@
 Public Class Form2
     ' Replace with your actual connection string
     Private connectionString As String = "Server=localhost;Database=butique;User=root;Password=admin;"
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Hide the Guna2GroupBox controls on form load
+        Guna2GroupBox4.Visible = False
+        Guna2GroupBox3.Visible = False
+        Guna2GroupBox6.Visible = False
+        Guna2GroupBox5.Visible = False
 
+        ' Set options for the Guna2ComboBox
+        Guna2ComboBox1.Items.AddRange({"S", "M", "L", "XL", "XXL"})
+        Guna2ComboBox1.SelectedIndex = 0 ' Set the default selection (optional)
+    End Sub
+
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+        Guna2GroupBox3.Visible = True
+    End Sub
     Private Sub Guna2GradientButton7_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton7.Click
         Dim dressName As String = Guna2TextBox1.Text
         Dim dressQty As Integer
@@ -42,14 +56,8 @@ Public Class Form2
         End Try
     End Function
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
-        Guna2GroupBox4.Visible = False
-        Guna2GroupBox3.Visible = False
-        Guna2GroupBox6.Visible = False
-        Guna2GroupBox5.Visible = False
-    End Sub
 
     Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
-        Guna2GroupBox3.Visible = True
+        Guna2GroupBox4.Visible = True
     End Sub
 End Class
