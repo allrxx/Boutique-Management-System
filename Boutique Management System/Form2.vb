@@ -141,4 +141,107 @@ Public Class Form2
         End If
     End Sub
 
+    Private Sub Guna2GradientButton3_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton3.Click
+        Guna2GroupBox5.Visible = True
+    End Sub
+
+    Private Sub Guna2GradientButton4_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton4.Click
+        Guna2GroupBox6.Visible = True
+    End Sub
+    Private Sub Guna2GradientButton11_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton11.Click
+        ' Get the input values from Guna2TextBox4 and Guna2TextBox3
+        Dim username As String = Guna2TextBox4.Text
+        Dim password As String = Guna2TextBox3.Text
+
+        ' Perform any action with the username and password, for example, print them to the console
+        Console.WriteLine($"Username: {username}, Password: {password}")
+
+        ' Call a method to commit changes to the user (you can replace this with your actual logic)
+        If CommitUserChanges(username, password) Then
+            MessageBox.Show("User changes committed successfully!")
+        Else
+            MessageBox.Show("Failed to commit user changes. Please check the input.")
+        End If
+    End Sub
+
+    Private Function CommitUserChanges(username As String, password As String) As Boolean
+        Try
+            ' Perform the necessary logic to commit changes to the user
+            ' Replace the following line with your actual database logic
+            ' For example, you might use a MySqlCommand to update the user table in a MySQL database
+            ' Here, we are just returning True for demonstration purposes
+            Return True
+        Catch ex As Exception
+            ' Handle any exceptions and display an error message
+            MessageBox.Show($"Error: {ex.Message}")
+            Return False
+        End Try
+    End Function
+    Private Sub Guna2GradientButton14_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton14.Click
+        ' Call the method to load the user table into Guna2DataGridView2
+        LoadUserTable()
+    End Sub
+
+    Private Sub Guna2GradientButton13_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton13.Click
+        ' Call the method to commit changes to the user table
+        CommitUserChanges()
+    End Sub
+
+    Private Sub LoadUserTable()
+        Try
+            ' Assuming you have a MySqlConnection and a MySqlCommand for retrieving data
+            Using connection As New MySqlConnection("YourConnectionStringHere")
+                connection.Open()
+
+                ' Replace the query with your actual SELECT query for the user table
+                Dim query As String = "SELECT * FROM user"
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Assuming you have a DataTable to store the retrieved data
+                    Dim dataTable As New DataTable()
+
+                    ' Fill the DataTable with the data from the query
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        adapter.Fill(dataTable)
+                    End Using
+
+                    ' Bind the DataTable to Guna2DataGridView2
+                    Guna2DataGridView2.DataSource = dataTable
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Error loading user table: {ex.Message}")
+        End Try
+    End Sub
+
+    Private Sub CommitUserChanges()
+        ' Assuming you have a DataTable as the DataSource of Guna2DataGridView2
+        Dim dataTable As DataTable = TryCast(Guna2DataGridView2.DataSource, DataTable)
+
+        If dataTable IsNot Nothing Then
+            Try
+                ' Assuming you have a MySqlCommand for updating changes
+                Using connection As New MySqlConnection("YourConnectionStringHere")
+                    connection.Open()
+
+                    ' Replace the query with your actual UPDATE query for the user table
+                    Dim updateQuery As String = "UPDATE user SET username = @username, password = @password WHERE id = @id"
+
+                    ' Iterate through the rows in the DataTable and update changes
+                    For Each row As DataRow In dataTable.Rows
+                        Using cmd As New MySqlCommand(updateQuery, connection)
+                            cmd.Parameters.AddWithValue("@username", row("username"))
+                            cmd.Parameters.AddWithValue("@password", row("password"))
+                            cmd.Parameters.AddWithValue("@id", row("id"))
+
+                            cmd.ExecuteNonQuery()
+                        End Using
+                    Next
+                End Using
+
+                MessageBox.Show("User changes committed successfully!")
+            Catch ex As Exception
+                MessageBox.Show($"Error committing user changes: {ex.Message}")
+            End Try
+        End If
+    End Sub
 End Class
