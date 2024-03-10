@@ -153,5 +153,8 @@
   <ItemGroup>
     <None Include="Resources\monitor.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
